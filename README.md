@@ -5,6 +5,20 @@
 
 An example mod for Minecraft 1.7.10 with Forge focussed on a stable, updatable setup.
 
+### Fork Changes
+
+This fork is for my mods that I create on VSCode, that is all.
+
+Commands to use:
+- `./gradlew updateDependencies` - Update the project dependencies
+- `./gradlew eclipse` - I don't use eclipse but this command creates the .classpath file required for VSCode
+- `./gradlew clean setupDecompWorkspace --refresh-dependencies` - Setup workspace and clean any mistakes
+- `./gradlew spotlessApply build runClient` - Apply spotless fixes, build the project (output the mod under build/libs/) and run the client.
+
+Want to change the version?
+- `git tag -a 0.0.0` - This will create a tag for your repo that will be used in the naming of your mod like "mymodid-0.0.0-master+d6d92982eb-dirty"
+- `git push --tags` - Push all the tags
+
 ### Motivation
 
 We had our fair share in struggles with build scripts for Minecraft Forge. There are quite a few pitfalls from non-obvious error messages. This Example Project provides you a build system you can adapt to over 90% of Minecraft Forge mods and can easily be updated if need be.
